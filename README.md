@@ -1,3 +1,7 @@
+# Target
+
+Have a taste of Tauri framework, rust and svelte. Build a simple todo-list app.
+
 # Tauri + Svelte + Typescript
 
 This template should help get you started developing with Tauri, Svelte and TypeScript in Vite.
