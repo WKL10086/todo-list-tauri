@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Todo } from "src/type/todo.type";
+  import type { Todo } from "src/types/todo.type";
 
   export let item: Todo;
 
