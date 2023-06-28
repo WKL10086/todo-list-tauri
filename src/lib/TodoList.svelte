@@ -6,7 +6,7 @@
   let todoList: Todo[] = [];
 
   async function getTodoList() {
-    todoList = await invoke("getTodoList");
+    todoList = await invoke("get_todo_list");
   }
 
   getTodoList();
