@@ -1,6 +1,9 @@
 # Target
 
-Have a taste of Tauri framework, rust and svelte. Build a simple todo-list app.
+Have a taste of Tauri framework.
+Use rust as backend, svelte as frontend.
+Use pico as css framework.
+Build a simple todo-list app.
 <br/>
 
 # How to dev
