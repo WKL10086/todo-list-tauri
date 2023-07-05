@@ -1,5 +1,5 @@
 <script lang="ts">
-  import TodoList from "./lib/TodoList.svelte";
+  import TodoList from "./lib/components/todo/TodoList.svelte";
   import "@picocss/pico";
 </script>
 

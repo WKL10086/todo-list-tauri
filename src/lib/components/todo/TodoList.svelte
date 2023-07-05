@@ -1,7 +1,7 @@
 <script lang="ts">
   import { invoke } from "@tauri-apps/api/tauri";
   import TodoItem from "./TodoItem.svelte";
-  import type { Todo } from "src/types/todo.type";
+  import type { Todo } from "../../../types/todo.type";
 
   let todoList: Todo[] = [];
 
