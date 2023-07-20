@@ -1,11 +1,6 @@
 use tauri::command;
 
-#[derive(serde::Serialize)]
-pub struct Todo {
-    id: i32,
-    title: String,
-    completed: bool,
-}
+use crate::todo::Todo;
 
 #[command]
 pub fn get_todo_list() -> Vec<Todo> {
