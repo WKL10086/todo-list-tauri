@@ -7,8 +7,8 @@ pub struct Todo {
     pub completed: bool,
 }
 
-trait Create {
-    fn new(&self, title: String) -> Todo;
+pub trait Create {
+    fn new(&self, title: String) -> Self;
 }
 
 impl Create for Todo {
