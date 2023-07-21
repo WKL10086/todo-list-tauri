@@ -6,7 +6,10 @@ mod todo;
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![cmd::get_todo_list])
+        .invoke_handler(tauri::generate_handler![
+            cmd::get_init_todo_list,
+            cmd::create_todo
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

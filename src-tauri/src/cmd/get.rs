@@ -1,9 +1,8 @@
+use crate::todo::{Create, Todo};
 use tauri::command;
 
-use crate::todo::{Create, Todo};
-
 #[command]
-pub fn get_todo_list() -> Vec<Todo> {
+pub fn get_init_todo_list() -> Vec<Todo> {
     let todo1: Todo = Create::new("Learn Tauri".to_string());
 
     let todo2: Todo = Create::new("Learn Rust".to_string());
