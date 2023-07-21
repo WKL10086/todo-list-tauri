@@ -3,7 +3,7 @@
 
   export let item: Todo;
 
-  let id = item.id.toString();
+  let id = item.id;
 </script>
 
 <div>

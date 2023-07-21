@@ -1,15 +1,24 @@
+use cuid2::create_id;
+
 #[derive(serde::Serialize)]
 pub struct Todo {
-    pub id: i32,
+    pub id: String,
     pub title: String,
     pub completed: bool,
 }
 
-// #[derive(serde::Serialize)]
-// pub struct TodoList {
-//     pub todo_list: Vec<Todo>,
-// }
+trait Create {
+    fn new(&self, title: String) -> Todo;
+}
 
-// trait Create {
-//     fn create(&self, title: String) -> Todo;
-// }
+impl Create for Todo {
+    fn new(&self, title: String) -> Todo {
+        let id = create_id();
+
+        Todo {
+            id: id,
+            title: title,
+            completed: false,
+        }
+    }
+}
