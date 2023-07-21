@@ -6,8 +6,11 @@
   let id = item.id;
 </script>
 
-<div>
-  <h2>{item.title}</h2>
-  <label for={id} />
+<div class="grid">
+  <label for={id}>
+    <h2>
+      {item.title}
+    </h2>
+  </label>
   <input type="checkbox" {id} name={id} value={item.completed} />
 </div>
