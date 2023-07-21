@@ -8,11 +8,11 @@ pub struct Todo {
 }
 
 pub trait Create {
-    fn new(&self, title: String) -> Self;
+    fn new(title: String) -> Self;
 }
 
 impl Create for Todo {
-    fn new(&self, title: String) -> Todo {
+    fn new(title: String) -> Todo {
         let id = create_id();
 
         Todo {
