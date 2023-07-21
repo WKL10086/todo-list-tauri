@@ -1,12 +1,18 @@
 <script lang="ts">
   import { invoke } from "@tauri-apps/api/tauri";
   import TodoItem from "./TodoItem.svelte";
+  import { todoList } from "./store";
   import type { Todo } from "../../../types/todo.type";
 
-  let todoList: Todo[] = [];
+  let todoListValue;
+
+  todoList.subscribe((value) => {
+    todoListValue = value;
+  });
 
   async function getTodoList() {
-    todoList = await invoke("get_todo_list");
+    let result: Todo[] = await invoke("get_init_todo_list");
+    todoList.set(result);
   }
 
   getTodoList();
@@ -14,7 +20,7 @@
 
 <div>
   <h1>Todo List</h1>
-  {#each todoList as item (item.id)}
+  {#each todoListValue as item (item.id)}
     <TodoItem {item} />
   {/each}
 </div>
