@@ -12,7 +12,7 @@
 
   async function getTodoList() {
     let result: Todo[] = await invoke("get_init_todo_list");
-    todoList.set(result);
+    $todoList = result;
   }
 
   getTodoList();
