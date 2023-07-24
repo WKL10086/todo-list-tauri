@@ -8,9 +8,9 @@
 
 <div class="grid">
   <label for={id}>
-    <h2>
+    <input type="checkbox" {id} name={id} checked={item.completed} />
+    <strong>
       {item.title}
-    </h2>
+    </strong>
   </label>
-  <input type="checkbox" {id} name={id} value={item.completed} />
 </div>

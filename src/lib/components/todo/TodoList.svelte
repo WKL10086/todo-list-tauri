@@ -19,8 +19,10 @@
 </script>
 
 <div>
-  <h1>Todo List</h1>
-  {#each todoListValue as item (item.id)}
-    <TodoItem {item} />
-  {/each}
+  <fieldset>
+    <legend><strong>View</strong></legend>
+    {#each todoListValue as item (item.id)}
+      <TodoItem {item} />
+    {/each}
+  </fieldset>
 </div>
