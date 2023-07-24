@@ -1,6 +1,6 @@
 use cuid2::create_id;
 
-#[derive(serde::Serialize)]
+#[derive(Default, serde::Serialize)]
 pub struct Todo {
     pub id: String,
     pub title: String,
@@ -14,7 +14,7 @@ impl Todo {
         Todo {
             id: id,
             title: title,
-            completed: false,
+            ..Default::default()
         }
     }
 }
